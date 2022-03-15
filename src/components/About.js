@@ -1,4 +1,4 @@
-import paola from '../images/paolaBack.png'
+import paola from '../images/paolaBack.jpg'
 
 function About() {
     return (

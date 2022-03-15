@@ -136,7 +136,7 @@ function Services({ showArrow, setProduct, setModal, pageWidth }) {
                 Pacotes
             </div>
 
-            <div className='one-metting-services-area'>
+            <div className='one-metting-services-area-package'>
                 <div className="packages-container" style={pageWidth > 1500 ? {justifyContent: 'space-around'} : {}} >
                     {packageServices.map((service) => {
                         return <div className='one-metting-services-packages-list'>

@@ -8,7 +8,7 @@ function Contact({ pageWidth, handleExternal }) {
 
               <div className="contact-body-container">
                 
-                <div className="contacts-container" style={pageWidth < 1500 ? {display: 'block', width: '50vw', margin: '50px auto'} : {}}>
+                <div className="contacts-container" >
                   <div className="contacts-insta" onClick={() => handleExternal('instagram')} style={pageWidth < 1500 ? {margin: '50px auto'} : {}}>
                     <span className="contacts-item-name">Instagram
                     <span className="contacts-item-info">@paolaramalhete</span>
@@ -28,6 +28,7 @@ function Contact({ pageWidth, handleExternal }) {
                   </span>
                   </div>
                 </div>
+
               </div>
 
     </div>
