@@ -9,6 +9,8 @@ import package2 from '../images/pacote2.jpg'
 import journey from '../images/jornada.jpg'
 import ArrowCircleLeftIcon from '@mui/icons-material/ArrowCircleLeft';
 import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
+import PixIcon from '@mui/icons-material/Pix';
+import mercadopago from '../images/mercadopago.svg'
 
 function Services({ showArrow, setProduct, setModal, pageWidth }) {
     const [servicesScroll, setServicesScroll] = useState(0);
@@ -121,8 +123,8 @@ function Services({ showArrow, setProduct, setModal, pageWidth }) {
                 <div className='one-metting-services-area'>
                     <div className='one-metting-services-list' style={showArrow ? { marginLeft: servicesScroll, width: 2400 } : { display: 'flex', justifyContent: 'space-around' }}>
 
-                        {individualServices.map((service) => {
-                            return <div className='one-metting-services-item' onClick={() => openModal(service)}>
+                        {individualServices.map((service, key) => {
+                            return <div className='one-metting-services-item' key={key} onClick={() => openModal(service)}>
                                 <img src={service.img} alt={service.name} className="one-metting-services-img" />
                                 <button className="one-metting-services-title">{service.name}</button>
                             </div>
@@ -138,8 +140,8 @@ function Services({ showArrow, setProduct, setModal, pageWidth }) {
 
             <div className='one-metting-services-area-package'>
                 <div className="packages-container" style={pageWidth > 1500 ? {justifyContent: 'space-around'} : {}} >
-                    {packageServices.map((service) => {
-                        return <div className='one-metting-services-packages-list'>
+                    {packageServices.map((service, key) => {
+                        return <div className='one-metting-services-packages-list' key={key}>
                             <div className='one-metting-services-item' onClick={() => openModal(service)}>
                             <img src={service.img} alt={service.name} className="one-metting-services-img" />
                             <button className="one-metting-services-title-package">{service.name.split(' ').slice(0, 2).join(' ').replaceAll(":", "")}</button>
@@ -149,6 +151,13 @@ function Services({ showArrow, setProduct, setModal, pageWidth }) {
                 </div>
             </div>
 
+        <div className="payment-container">
+            <p className="payment-title">Formas de pagamento:</p>
+            <div className="payment-icons">
+                <img className="payment-mercadopago" alt="mercado pago" src={mercadopago}/>
+                <PixIcon alt="pix" sx={{fontSize: '80px', marginLeft: '30px', backgroundColor: '#10106d', color: '#fff'}}/>
+            </div>
+        </div>
         </div>
     )
 }
