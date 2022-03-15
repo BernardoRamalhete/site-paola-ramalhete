@@ -490,6 +490,14 @@
     display: block;
   }
 
+  .about-container {
+    display: block;
+  }
+
+  .about-text {
+    width: 100%;
+  }
+
   .client-item {
     width: 100vw;
   }
