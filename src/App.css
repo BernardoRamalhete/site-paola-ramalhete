@@ -1,38 +1,506 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Asap:wght@400;500;600;700&display=swap');
+@font-face {
+  font-family: 'Priscilla Signature';
+  font-weight: 100;
+  src: url('./fonts/priscillasignaturefont-regular-webfont.woff2')
+}
+
+* {
+  background-color: #fff;
+  box-sizing: border-box;
+  font-family: 'Asap', sans-serif;
+  margin: 0;
+}
+
+.white-bar {
+  background-color: white;
+  height: 5vh;
+  position: relative;
+  bottom: -5vh;
+  z-index: 100;
+}
+
+.top-container {
+  position: relative;
+  top: -8vh;
+  height: 100%;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url('./images/topBackground.jpg');
+  background-size: cover;
+  transform: scale(0.9);
+}
+
+.top-menu-container { 
+  display: flex;
+  background-color: transparent;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+  width: 100%;
+  position: relative;
+  bottom: -70px;
+}
+
+.top-icons { 
+  display: flex;
+  width: 20vw;
+  justify-content: space-between;
+  background-color: transparent;
+  margin-left: 30px;
+}
+
+.top-icon-item { 
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.navigation-menu {
+  color: #000;
+  display: flex;
+  font-size: 16px;
+  align-items: center;
+  margin-right: 10px;
+  background-color: transparent;
+}
+
+.navigation-menu-item { 
+  margin-right: 30px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.navigation-menu-button { 
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  background-color: #10106d;
+  padding: 7px;
+  transition: all ease 0.5s
+}
+
+.navigation-menu-button:hover { 
+  color: #000;
+  font-size: 16px;
+  background-color: #a6beed;
+}
+
+.top-logo-image {
+  display: flex;
+  width: 50vw;
+  margin: 200px auto 300px;
+  background-color: transparent;
+  justify-content: center;
+  padding-bottom: 35vh;
+}
+
+.downpage-body { 
+  position: relative;
+  top: -50vh;
+}
+
+.tab-title-container {
+  background-color: transparent;
+}
+
+.tab-title,
+.tab-title-package {
+  position: relative;
+  top: -80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #10106d;
+  color: #fff;
+  width: 300px;
+  height: 150px;
+  margin: 0 auto;
+  font-family: 'Priscilla Signature';
+  font-size: 100px;
+  padding-top: 50px;
+  line-height: 80px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.testemonies {
+  padding-bottom: 25px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.tab-title-package {
+  margin-top: 200px;
+  top: -60px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.larger {
+  width: 350px;
+}
+
+.one-metting-services-area {
+  overflow-x: hidden;
+  padding-left: 40px;
+}
+
+.one-metting-services-list { 
+  transition: all ease 0.5s;
+}
+
+.packages-container { 
+  display: flex;
+  justify-content: center;
+}
+
+.one-metting-services-item { 
+  width: 400px;
+  display: inline-block;
+}
+
+.one-metting-services-title { 
+  position: relative;
+  z-index: 100;
+  font-family: 'Asap';
+  font-size: 20px;
+  display: block;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.8);
+  transition: all ease 0.3s;
+  text-align: center;
+  border: none;
+  top: -80px;
+  width: 360px;
+  height: 60px;
+}
+
+.one-metting-services-title-package { 
+  position: relative;
+  top: -80px;
+  right: -10px;
+  z-index: 100;
+  font-family: 'Asap';
+  font-size: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  transition: all ease 0.3s;
+  text-align: center;
+  width: 380px;
+  height: 60px;
+  border: none;
+}
+
+.one-metting-services-item:hover .one-metting-services-title{
+  font-size: 25px;
+  height: 80px;
+  width: 400px;
+}
+
+.one-metting-services-item:hover .one-metting-services-title-package{
+  font-size: 25px;
+  right: 0;
+  height: 80px;
+  width: 400px;
+}
+
+.one-metting-services-img {
+  width: 100%;
+  transform: scale(0.9);
+  cursor: pointer;
+  transition: all ease 0.3s;
+}
+
+.one-metting-services-img:hover {
+  transform: scale(1);
+}
+
+.one-metting-services-left,
+.one-metting-services-right { 
+    position: absolute;
+    width: 100px;
+    height: 450px;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    cursor: pointer;
+    background:transparent;
+    opacity: 0;
+    transition: all ease 0.5s;
+    margin-top: 25px;
+}
+
+.one-metting-services-left { 
+  background: linear-gradient(to right, #10106d93, transparent);
+  left: 0;
+}
+
+.one-metting-services-right { 
+  background: linear-gradient(to left, #10106d93 , transparent );
+  right: 0;
+}
+
+.one-metting-services-body:hover .one-metting-services-left,
+.one-metting-services-body:hover .one-metting-services-right {
+  opacity: 1;
+}
+
+.modal-overlay { 
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color:#000;
+  opacity: 0.7;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-align { 
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: auto;
+  background-color: #fff;
+  z-index: 10005;
+  margin: 10vh;
+  border-radius: 5px;
+  padding: 20px;
+  width: 900px
+}
+
+.modal-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.modal-title {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.modal-price { 
+  font-weight: bold;
+}
+
+.modal-description { 
+  margin-top: 15px;
+  margin-bottom: 30px;
+  font-size: 16px;
+  line-height: 25px;
+}
+
+.modal-steps {
+  margin-bottom: 30px;
+  font-weight: 500;
+}
+
+.modal-detail {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.client-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}
+
+.client-item {
+  width: 600px;
+  background-color: #a6beed;
+  margin: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 10px;
+}
+
+.client-picture {
+  width: 250px;
+  border-radius: 50%;
+  margin: 30px;
+}
+
+.client-name {
+  background-color: #a6beed;
+  text-align: center;
+  font-family: "Priscilla Signature";
+  font-size: 100px;
+  font-weight: 100;
+}
+
+.client-job {
+  background-color: #a6beed;
+  position: relative;
+  top: -40px;
+}
+
+.client-testemonie {
+  background-color: #a6beed;
+  font-size: 16px;
+  line-height: 25px;
+  margin: 15px;
+  margin-top: 0;
+}
+
+.contact-body-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contacts-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 80px;
+}
+
+.contacts-insta {
+  background-image: url('./images/insta-logo.png');
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+  margin-left: 150px;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.contacts-whats {
+  background-image: url('./images/whats-logo.png');
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.contacts-mail {
+  background-image: url('./images/email-logo.png');
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+  margin-right: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.contacts-item-name {
+  font-family: 'Priscilla Signature';
+  font-size: 200px;
+  background-color: transparent;
+  cursor: pointer;
+  margin-bottom: -50px;
+}
+
+.contacts-item-info {
+  position: relative;
+  top: -30px;
+  font-size: 20px;
+  text-align: center;
+  background-color: transparent;
+  display: block;
+
+}
+
+.up {
+  bottom: +10px;
+}
+
+.down {
+  top: -10px;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px;
+  width: 60%;
+  position: relative;
+  right: -18%;
+}
+
+.about-text {
+  margin: 0 20px;
+  display: block;
+  width: 600px;
+  background-color: #fff;
+  padding: 20px 45px 20px 45px;
+}
+
+.about-title {
+  font-size: 70px;
+  font-weight: 700;
+  background-color: transparent;
+  position: relative;
+  left: -170px;
+  color: #fff;
+}
+
+.about-paragraph {
+  margin: 50px 0px 50px 0px;
+  background-color: #fff;
+  font-size: 16px;
+  line-height: 30px;
+}
+
+.about-img {
+  width: 350px;
+  position: relative;
+  border: 5px solid #000;
+  right: -2vw
+}
+
+@media (min-width: 1500) {
+  .contacts-container {
+    display: block;
   }
-  to {
-    transform: rotate(360deg);
+
+  .about-img {
+    right: 0;
   }
+  
+}
+
+@media (max-width: 979px) {
+  .modal-container {
+    width: 55vw;
+  }
+
+  .about-img {
+    right: 0;
+  }
+}
+
+@media (max-width: 760px) {
+  .client-list {
+    display: block;
+  }
+
+  .client-item {
+    width: 100vw;
+  }
+  
+  .one-metting-services-left,
+  .one-metting-services-right { 
+      opacity: 1;
+  }
+
+  .about-img {
+    right: 0;
+  }
+  
 }
