@@ -34,10 +34,12 @@ function PageTop({pageWidth, handleExternal, isAbout, isContact, isTestemonies, 
                         <div className="navigation-menu-item" onClick={goToContact} style={isContact ? { 'borderBottom': '2px solid #10106d' } : { 'borderBottom': 'none' }}>
                             Contato
                         </div>
+                        
 
-                        <div className="navigation-menu-item" onClick={goToTestemonies} style={isTestemonies ? { 'borderBottom': '2px solid #10106d' } : { 'borderBottom': 'none' }}>
+                        {/*<div className="navigation-menu-item" onClick={goToTestemonies} style={isTestemonies ? { 'borderBottom': '2px solid #10106d' } : { 'borderBottom': 'none' }}>
                             Depoimentos
                         </div>
+                        */}
 
                         <button className="navigation-menu-item navigation-menu-button" onClick={goToServices}>
                             Serviços
