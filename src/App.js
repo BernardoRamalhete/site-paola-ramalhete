@@ -61,7 +61,7 @@ function App() {
         window.open('https://www.instagram.com/paolaramalhete/', '_blank')
       break;
       case 'whatsapp':
-        window.open('https://whatsa.me/5535984288998', '_blank')
+        window.open('https://whatsa.me/5535991097277', '_blank')
       break;
       case 'email':
         window.open('mailto: paolaramalheteconsultoria@gmail.com')
@@ -87,7 +87,7 @@ function App() {
   return (
     <>
         <div className='white-bar'/>
-       <PageTop pageWidth={pageWidth} handleExternal={handleExternal} isAbout={isAbout} isContact={isContact} isTestemonies={isTestemonies} goToAbout={goToAbout} goToContact={goToContact} goToTestemonies={goToTestemonies} goToServices={goToServices}/>
+       <PageTop pageWidth={pageWidth} handleExternal={handleExternal} isAbout={isAbout} isContact={isContact} isTestemonies={isTestemonies} goToAbout={goToAbout} goToContact={goToContact} goToTestemonies={goToTestemonies} goToServices={goToServices} />
 
         <div className="tab-title-container">
           {isAbout ?

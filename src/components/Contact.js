@@ -18,7 +18,7 @@ function Contact({ pageWidth, handleExternal }) {
 
                   <div className="contacts-whats" onClick={() => handleExternal('whatsapp')} style={pageWidth < 1500 ? {margin: '50px auto'} : {}}>
                   <span className="contacts-item-name">WhatsApp
-                  <span className="contacts-item-info up">(35) 9 98428-8998</span>
+                  <span className="contacts-item-info up">(35) 9 99109-7277</span>
                   </span>
                   </div>
 
